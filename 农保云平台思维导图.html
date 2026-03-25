@@ -7,6 +7,23 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #f5f7fa; }
+    @page { margin: 10mm; }
+    @media print {
+      body { background: #fff; }
+      header { box-shadow: none; }
+      #mind-map-container {
+        width: auto !important;
+        height: auto !important;
+      }
+      .markmap {
+        width: auto !important;
+        height: auto !important;
+      }
+      svg.markmap {
+        max-width: none !important;
+        max-height: none !important;
+      }
+    }
     header {
       background: linear-gradient(135deg, #1a6b3c 0%, #2e9e5b 100%);
       color: #fff;
@@ -40,7 +57,7 @@
 ---
 markmap:
   colorFreezeLevel: 2
-  initialExpandLevel: 3
+  initialExpandLevel: 99
   maxWidth: 300
   zoom: true
   pan: true
@@ -257,6 +274,40 @@ markmap:
 </script>
 </div>
 </div>
+
+<script>
+  (function () {
+    function resizeForPrint() {
+      const container = document.getElementById('mind-map-container');
+      const svg = document.querySelector('svg.markmap');
+      if (!container || !svg) return false;
+      const box = svg.getBBox();
+      const padding = 80;
+      const width = Math.ceil(box.x + box.width + padding * 2);
+      const height = Math.ceil(box.y + box.height + padding * 2);
+      container.style.width = width + 'px';
+      container.style.height = height + 'px';
+      svg.style.width = width + 'px';
+      svg.style.height = height + 'px';
+      svg.setAttribute('viewBox', [box.x - padding, box.y - padding, width, height].join(' '));
+      svg.setAttribute('width', width);
+      svg.setAttribute('height', height);
+      document.body.style.width = width + 'px';
+      document.body.style.minHeight = 'auto';
+      return true;
+    }
+
+    let attempts = 0;
+    const timer = setInterval(function () {
+      attempts += 1;
+      if (resizeForPrint() || attempts > 40) {
+        clearInterval(timer);
+      }
+    }, 500);
+
+    window.addEventListener('beforeprint', resizeForPrint);
+  })();
+</script>
 
 </body>
 </html>
