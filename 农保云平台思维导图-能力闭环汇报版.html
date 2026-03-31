@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>农保云平台 · 能力闭环汇报版思维导图</title>
+  <script src="https://cdn.jsdelivr.net/npm/markmap-autoloader@0.16"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: "PingFang SC", "Microsoft YaHei", sans-serif; background: #eef3ee; color: #1d3125; }
+    @page { margin: 10mm; }
+    @media print {
+      body { background: #fff; }
+      header { box-shadow: none; }
+      #mind-map-container {
+        width: auto !important;
+        height: auto !important;
+      }
+      .markmap {
+        width: auto !important;
+        height: auto !important;
+      }
+      svg.markmap {
+        max-width: none !important;
+        max-height: none !important;
+      }
+    }
+    header {
+      background: linear-gradient(135deg, #173d2e 0%, #2f6c50 55%, #6fa178 100%);
+      color: #f6fbf7;
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 3px 12px rgba(23, 61, 46, 0.18);
+      border-bottom: 1px solid rgba(255,255,255,0.14);
+    }
+    header h1 { font-size: 22px; font-weight: 700; letter-spacing: 0.5px; }
+    header p  { font-size: 13px; opacity: 0.9; margin-top: 4px; }
+    #mind-map-container {
+      width: 100vw;
+      height: calc(100vh - 78px);
+    }
+    .markmap { width: 100%; height: 100%; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <h1>农保云平台 · 能力闭环汇报版</h1>
+    <p>适用于产品方案汇报 / 能力讲解 / 试点路径说明 · 2026-03-31</p>
+  </div>
+</header>
+
+<div id="mind-map-container">
+<div class="markmap">
+<script type="text/template">
+---
+markmap:
+  colorFreezeLevel: 2
+  initialExpandLevel: 99
+  maxWidth: 320
+  zoom: true
+  pan: true
+---
+
+# 农保云平台
+
+## 一、产品核心闭环
+- 以地图为底座
+- 以任务为牵引
+- 以天空地一体为执行方式
+- 以证据链为结果保障
+- 形成“精准承保 → 风险减量 → 精准理赔”的业务闭环
+
+---
+
+## 二、前段：精准承保
+
+### 1. 承保数据上图
+- 导入保险公司保单数据
+- 关联到村级行政区划
+- 形成承保区域分布图
+
+### 2. 风险区划支撑
+- 历史灾害数据沉淀
+- 区域风险等级识别
+- 重点区域提前标记
+- 为招投标展示和承保决策提供依据
+
+### 3. 分级核保执行
+#### 卫星初筛
+- 大范围快速覆盖
+- 识别疑似异常区域
+
+#### 无人机复核
+- 对重点区域精细核查
+- 提升核保精度
+
+#### 人工核验
+- 现场拍照
+- GPS 打点
+- 复杂场景最终确认
+
+### 4. 核保结果输出
+- 实际面积对比
+- 异常标注
+- 影像留证
+- 核保结果审核入库
+
+---
+
+## 三、中段：风险减量
+
+### 自然灾害预警
+- 接入气象与灾害预警数据
+- 对承保区域进行风险提示
+- 支撑提前干预和重点关注
+
+### 病虫害监测
+- 遥感识别异常迹象
+- 输出病虫害风险线索
+- 形成重点监测区域
+
+### 过程展示监测
+- 作物关键生长节点影像留存
+- 形成承保期内时序记录
+- 为后续理赔提供过程证据
+
+### 道德风险预警
+- 识别异常种植行为
+- 发现投保面积与实际种植不符风险
+- 形成主动预警能力
+
+### 风险减量价值
+- 降低赔付风险
+- 强化过程留痕
+- 提升保险公司风险管理能力
+
+---
+
+## 四、后段：精准理赔
+
+### 1. 灾后任务发起
+- 按区域或保单快速发起核查任务
+- 支持分级处理和优先级判断
+
+### 2. 分级定损核查
+#### 卫星遥感定损
+- 快速评估大范围受灾情况
+- 形成受灾范围初判
+
+#### 无人机核查
+- 对重点区域开展精细定损
+- 获取更高精度影像证据
+
+#### 现场核验
+- 地面人员到场取证
+- 形成最终核查结论
+
+### 3. 理赔结果支撑
+- 受灾范围地图
+- 受灾面积估算
+- 前后过程影像对比
+- 定损报告与证据链输出
+
+### 4. 理赔业务价值
+- 提升定损客观性
+- 降低合谋骗赔风险
+- 缩短理赔周期
+
+---
+
+## 五、闭环支撑能力
+
+### 地图底座
+- 行政区划 GIS 数据
+- 保单与区域关联
+- 承保、监测、理赔统一地图视图
+
+### 任务调度
+- 任务创建
+- 任务分发
+- 执行状态跟踪
+- 结果回收与审核
+
+### 协保/信息员管理
+- 人员档案
+- 可服务区域
+- 移动端接单上报
+- 服务质量评价
+
+### 数据底座
+- 保单库
+- 地块与区域数据
+- 遥感影像时序库
+- 灾害历史库
+- 气象预警库
+- 理赔核查结果库
+
+### 证据链底座
+- 影像留存
+- GPS 坐标留痕
+- 任务日志
+- 结果归档
+- 可审计、可追溯
+
+---
+
+## 六、执行体系
+
+### Web 管理平台
+- 保险公司业务负责人
+- 平台运营管理员
+- 数据分析员
+
+### 移动执行端
+- 外勤 / 协保人员
+- 灾害信息员
+
+### 天空地一体执行网络
+#### 天
+- 卫星遥感
+- 低成本、大范围
+
+#### 空
+- 无人机
+- 高精度、重点覆盖
+
+#### 地
+- 外勤与信息员
+- 现场核验、补充证据
+
+---
+
+## 七、价值输出
+
+### 对保险公司
+- 提升承保真实性
+- 提高核保与理赔效率
+- 降低经营风险
+- 增强招投标能力
+
+### 对监管
+- 支撑精准投保理赔
+- 提升补贴资金真实性
+- 增强业务透明度
+
+### 对农户
+- 提升理赔公平性
+- 改善真实受灾赔付体验
+
+### 对平台方
+- 沉淀区域数据资产
+- 积累交付案例
+- 构建服务和数据双重壁垒
+
+---
+
+## 八、当前汇报重点
+
+### 一期优先能力
+- 保单地图化
+- 风险区划展示
+- 核保任务闭环
+- 现场核查上报
+- 标准化结果报告
+
+### 二期增强能力
+- 风险减量服务深化
+- 理赔辅助增强
+- 数据分析与经营报告丰富
+
+### 汇报建议表达
+- 强调“分级服务能力”而非一次性全覆盖
+- 强调“试点可落地闭环”而非大而全平台
+- 强调“先成交、再沉淀、再复制”的推进路径
+
+</script>
+</div>
+</div>
+
+<script>
+  (function () {
+    function resizeForPrint() {
+      const container = document.getElementById('mind-map-container');
+      const svg = document.querySelector('svg.markmap');
+      if (!container || !svg) return false;
+      const box = svg.getBBox();
+      const padding = 80;
+      const width = Math.ceil(box.x + box.width + padding * 2);
+      const height = Math.ceil(box.y + box.height + padding * 2);
+      container.style.width = width + 'px';
+      container.style.height = height + 'px';
+      svg.style.width = width + 'px';
+      svg.style.height = height + 'px';
+      svg.setAttribute('viewBox', [box.x - padding, box.y - padding, width, height].join(' '));
+      svg.setAttribute('width', width);
+      svg.setAttribute('height', height);
+      document.body.style.width = width + 'px';
+      document.body.style.minHeight = 'auto';
+      return true;
+    }
+
+    let attempts = 0;
+    const timer = setInterval(function () {
+      attempts += 1;
+      if (resizeForPrint() || attempts > 40) {
+        clearInterval(timer);
+      }
+    }, 500);
+
+    window.addEventListener('beforeprint', resizeForPrint);
+  })();
+</script>
+
+</body>
+</html>
